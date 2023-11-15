@@ -42,13 +42,31 @@ const createPass = () => {
 }
 
 genPas.addEventListener("click", () => {
-    p.textContent = createPass()
-})
+    currentPassword = createPass();
+    p.textContent = currentPassword;
+});
 
 reset.addEventListener("click", () => {
-    p.textContent = "**********"
-})
+    p.textContent = "**********";
+    currentPassword = "**********";
+});
 
 copy.addEventListener("click", () => {
-    navigator.clipboard.writeText(p.textContent)
-})
+    navigator.clipboard.writeText(currentPassword);
+    p.textContent = ""
+    copied();
+
+    setTimeout(() => {
+        p.textContent = currentPassword;
+    }, 1500);
+});
+
+const copied = () => {
+    const i = document.createElement("i")
+    const span = document.createElement("span")
+    i.className = "fa-solid fa-check"
+    span.textContent = "Copied"
+    p.appendChild(i)
+    p.appendChild(span)
+}
+
