@@ -17,36 +17,41 @@ body {
 .container {
     border: 2px solid whitesmoke;
     box-shadow: 0 0 10px whitesmoke, inset 0 0 10px whitesmoke;
-    padding: 2rem;
+    padding: 5rem;
     border-radius: 10px;
     text-align: center;
-    
+    width: 500px;
 }
 
-.password {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem;
+p {
+    margin: 2rem;
 }
 
 .buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .reset {
     background-color: red;
+    flex: 1;
 }
 
 .generate-password {
     background-color: green;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.copy {
+    background-color: whitesmoke;
+    color: black;
+    flex: 1;
 }
 
 button {
-    width: 40%;
     height: 30px;
     border-radius: 5px;
     border: none;
@@ -57,15 +62,38 @@ button {
 }
 
 button:hover {
-    scale: .95;
+    scale: .98;
+    opacity: .9;
 }
 
 @media screen and (max-width: 500px) {
     .container {
-        padding: 1.5rem;
+        width: 300px;
+        padding: 1rem;
     }
 
     h1 {
         font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .container {
+        width: 150px;
+        padding: .7rem;
+    }
+
+    p {
+        margin: .5rem;
+        font-size: .7rem;
+    }
+
+    h1 {
+        font-size: .8rem;
+    }
+
+    button {
+        font-size: .5rem;
+        height: 15px;
     }
 }
