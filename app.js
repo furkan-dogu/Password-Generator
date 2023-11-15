@@ -21,19 +21,19 @@ const createPass = () => {
     pas += upperCase[Math.floor(Math.random() * upperCase.length)]
     pas += lowerCase[Math.floor(Math.random() * lowerCase.length)]
 
-    for(i = 0; i < 3; i++) {
+    for(let i = 0; i < 3; i++) {
         pas += numbers[Math.floor(Math.random() * numbers.length)]
     }
 
-    for(i = 0; i < 2; i++) {
+    for(let i = 0; i < 2; i++) {
         pas += sembols[Math.floor(Math.random() * sembols.length)]
     }
 
-    for(i = 0; i < 3; i++) {
+    for(let i = 0; i < 3; i++) {
         pas += allChar[Math.floor(Math.random() * allChar.length)]
     }
 
-    for(i = 0; i < 10; i++) {
+    for(let i = 0; i < 10; i++) {
         let random = pas[Math.floor(Math.random() * pas.length)]
         password += random
         pas = pas.replace(random, "")
