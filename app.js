@@ -53,20 +53,17 @@ reset.addEventListener("click", () => {
 
 copy.addEventListener("click", () => {
     navigator.clipboard.writeText(currentPassword);
-    p.textContent = ""
-    copied();
+    Swal.fire({
+        position: "center-center",
+        icon: "success",
+        title: "Copied",
+        showConfirmButton: false,
+        timer: 1500
+    });
+
+    document.querySelector(".container").style.display = "none"
 
     setTimeout(() => {
-        p.textContent = currentPassword;
-    }, 1500);
+        document.querySelector(".container").style.display = "block"
+    }, 1700);
 });
-
-const copied = () => {
-    const i = document.createElement("i")
-    const span = document.createElement("span")
-    i.className = "fa-solid fa-check"
-    span.textContent = "Copied"
-    p.appendChild(i)
-    p.appendChild(span)
-}
-
