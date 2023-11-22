@@ -54,7 +54,7 @@ reset.addEventListener("click", () => {
 copy.addEventListener("click", () => {
     navigator.clipboard.writeText(currentPassword);
     Swal.fire({
-        position: "center-center",
+        position: "center",
         icon: "success",
         title: "Copied",
         showConfirmButton: false,
