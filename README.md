@@ -6,6 +6,10 @@
 
 This is a simple password generator web application that creates strong and secure passwords with a mix of uppercase letters, lowercase letters, numbers, and symbols.
 
+## Live Project Link
+
+You can access the live version of the project [here](https://password-generator-smoky-gamma.vercel.app/).
+
 ## Preview
 
 ![Password Generator](/assets/Screenshot_4.jpg)
